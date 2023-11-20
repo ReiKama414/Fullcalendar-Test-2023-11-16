@@ -3,8 +3,9 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Home from "./pages/Home";
+import Example from "./pages/Example";
 import reportWebVitals from "./test/reportWebVitals";
-import "./index.sass";
+import "./index.scss";
 
 const router = createBrowserRouter([
 	{
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
 			{
 				index: true,
 				element: <Home />,
+			},
+			{
+				path: "/example",
+				element: <Example />,
 			},
 		],
 	},
