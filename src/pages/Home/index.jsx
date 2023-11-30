@@ -33,6 +33,8 @@ const Home = () => {
 				themeSystem="Journal"
 				plugins={[dayGridPlugin, timeGridPlugin, listPlugin, interactionPlugin]}
 				initialView="dayGridMonth"
+				// // 設為星期一開始
+				// firstDay={1}
 				// validRange - (未添加至設置) 功用為限制顯示範圍
 				headerToolbar={{
 					// 逗號為緊密相鄰, 空格為有間隙
