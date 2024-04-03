@@ -10,6 +10,9 @@ import zhTwLocale from "@fullcalendar/core/locales/zh-tw";
 // npm install -save @fullcalendar/interaction
 // 用於事件拖曳、事件調整大小、日期點擊和日期選擇的日曆功能
 import interactionPlugin from "@fullcalendar/interaction";
+
+import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
 import eventData from "../../data/eventData";
 import { parseISO } from "date-fns";
 
@@ -40,8 +43,8 @@ const Home = () => {
 					// 逗號為緊密相鄰, 空格為有間隙
 					left: "prev,next today",
 					center: "title",
-					// right: "dayGridMonth,dayGridWeek,timeGridWeek,dayGridDay,listMonth",
-					right: "dayGridMonth,timeGridWeek,listMonth",
+					right: "dayGridMonth,dayGridWeek,timeGridWeek,dayGridDay,listMonth",
+					// right: "dayGridMonth,timeGridWeek,listMonth",
 				}}
 				// eventDrop, eventClick
 				events={events}
@@ -72,6 +75,21 @@ const Home = () => {
 				eventClick={(info) => {
 					console.log("Event clicked:", info.event.id, info.event.title, info.event);
 				}}
+				// eventContent={(info) => {
+				// 	return (
+				// 		<Tooltip
+				// 			title={
+				// 				<div>
+				// 					First Line
+				// 					<br />
+				// 					Second Line
+				// 				</div>
+				// 			}
+				// 			arrow>
+				// 			<p>{info.event.title}</p>
+				// 		</Tooltip>
+				// 	);
+				// }}
 				// 滑鼠 Hover 事件
 				// eventMouseEnter={(info) => {
 				// 	console.log("Mouse entered event:", info.event.id, info.event.title);
